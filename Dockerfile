@@ -1,5 +1,10 @@
 FROM node:14.8.0-alpine3.12
 
+ARG VCS_REF
+
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/hid-gs/docker-node-chromium.git"
+
 ENV CHROME_BIN="/usr/bin/chromium-browser" \
     NODE_ENV="production"
 
